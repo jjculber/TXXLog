@@ -1,0 +1,56 @@
+Models:
+
+User
+  name:string
+  callsign:string
+  deleted:boolean
+
+EventStation
+  event_name:string
+  callsign:string
+  start_time:datetime
+  end_time:datetime
+  exchange:string
+  location:string
+  section:string
+  category:string
+  category_power:string
+  wfd_bonus_offgrid:boolean
+  wfd_bonus_outdoor:boolean
+  wfd_bonus_remote:boolean
+  wfd_bonus_satellite:boolean
+  contact_name:string
+  contact_address:string
+  contact_city:string
+  contact_state:string
+  contact_postal_code:string
+  contact_country:string
+  contact_email:string
+
+Station
+  description:string
+  uuid:string
+
+LogEntry
+  event_id
+  contact_at:datetime
+  callsign:string
+  category:string
+  section:string
+  station_id
+  user_id
+  frequency:integer # in khz
+  mode:string
+  deleted:boolean
+
+Controllers:
+  UserController
+    index, create, log_out, log_in
+  StationController
+    index, create, edit, show
+  EventController
+    index, create, edit, view, export_log
+  
+  
+Classes/Service:
+  CabrilloFormatter

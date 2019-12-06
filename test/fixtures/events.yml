@@ -1,0 +1,45 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_name: MyString
+  callsign: MyString
+  start_time: 2019-12-05 17:21:11
+  end_time: 2019-12-05 17:21:11
+  exchange: MyString
+  location: MyString
+  section: MyString
+  category: MyString
+  category_power: MyString
+  wfd_bonus_offgrid: false
+  wfd_bonus_outdoor: false
+  wfd_bonus_remote: false
+  wfd_bonus_satellite: false
+  contact_name: MyString
+  contact_address: MyString
+  contact_city: MyString
+  contact_state: MyString
+  contact_postal_code: MyString
+  contact_country: MyString
+  contact_email: MyString
+
+two:
+  event_name: MyString
+  callsign: MyString
+  start_time: 2019-12-05 17:21:11
+  end_time: 2019-12-05 17:21:11
+  exchange: MyString
+  location: MyString
+  section: MyString
+  category: MyString
+  category_power: MyString
+  wfd_bonus_offgrid: false
+  wfd_bonus_outdoor: false
+  wfd_bonus_remote: false
+  wfd_bonus_satellite: false
+  contact_name: MyString
+  contact_address: MyString
+  contact_city: MyString
+  contact_state: MyString
+  contact_postal_code: MyString
+  contact_country: MyString
+  contact_email: MyString
