@@ -1,0 +1,30 @@
+<div class="log-entry-bar fixed-bottom">
+  <div class="container-xl">
+    <%= form_with model: LogEntry.new, local: true do |form| %>
+      <div class="row no-gutters">
+        <div class="col">
+          <div class="form-group">
+            <%= form.label :callsign %>
+            <%= form.text_field :callsign, class: "form-control" %>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <%= form.label :category %>
+            <%= form.text_field :category, class: "form-control" %>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <%= form.label :section %>
+            <%= form.text_field :section, class: "form-control" %>
+          </div>
+        </div>
+        <div class="col">
+          <%= form.submit "Submit" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
