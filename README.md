@@ -1,24 +1,40 @@
-# README
+# TXXLog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a web application for amateur radio contest logging. 
 
-Things you may want to cover:
+:bangbang: Status: Non-operational. Aiming to be working with limited support for Winter Field Day 2020.
 
-* Ruby version
+The goals:
+* modern web technology to allow flexibility of client devices with any OS
+* Multi-user and multi-station logging
+* Easy to use UI that allows efficient operation
+* Deployable on a Raspberry Pi for field operation
 
-* System dependencies
+## TODO List
+- [ ] Add views and forms to be able to complete basic interactions
+- [ ] Cabrillo file export
+- [ ] Add basic websocket support for realtime interaction
+- [ ] Support more generic contest format, not just Winter Field Day
 
-* Configuration
+## Deploy
 
-* Database creation
+TODO instructions for running application with docker, including raspberry pi specific instructions.
 
-* Database initialization
+## Development
 
-* How to run the test suite
+This is a Ruby on Rails 6 application.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Initialize Database
 
-* Deployment instructions
+It's currently using sqlite for the database, so it should be automatically created when the server starts.
 
-* ...
+### Install dependencies
+```bundle install```
+
+### Start the server
+```bundle exec rails s```
+(To allow connections not just from localhost, add `-b 0.0.0.0`)
+
+### Start an interactive console
+```bundle exec rails c```
+
