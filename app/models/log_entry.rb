@@ -19,6 +19,6 @@
 
 class LogEntry < ApplicationRecord
   belongs_to :event
-  belongs_to :station
-  belongs_to :user
+  belongs_to :station, optional: true
+  belongs_to :user, optional: true
 end

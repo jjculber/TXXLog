@@ -6,8 +6,8 @@ class CreateLogEntries < ActiveRecord::Migration[6.0]
       t.string :callsign
       t.string :category
       t.string :section
-      t.references :station, null: false, foreign_key: true
-      t.references :user, null: false, foreign_key: true
+      t.references :station, null: true, foreign_key: true
+      t.references :user, null: true, foreign_key: true
       t.integer :frequency
       t.string :mode
       t.boolean :deleted

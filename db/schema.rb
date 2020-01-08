@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 2019_12_06_012423) do
     t.string "callsign"
     t.string "category"
     t.string "section"
-    t.integer "station_id", null: false
-    t.integer "user_id", null: false
+    t.integer "station_id"
+    t.integer "user_id"
     t.integer "frequency"
     t.string "mode"
     t.boolean "deleted"

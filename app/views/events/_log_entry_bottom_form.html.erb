@@ -1,11 +1,11 @@
 <div class="log-entry-bar fixed-bottom">
   <div class="container-xl">
-    <%= form_with model: LogEntry.new, local: true do |form| %>
+    <%= form_with model: LogEntry.new, url: log_contact_event_path(@event) do |form| %>
       <div class="row no-gutters">
         <div class="col">
           <div class="form-group">
             <%= form.label :callsign %>
-            <%= form.text_field :callsign, class: "form-control" %>
+            <%= form.text_field :callsign, autofocus: true, class: "form-control" %>
           </div>
         </div>
         <div class="col">
@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="col">
-          <%= form.submit "Submit" %>
+          <%= form.submit "Submit", class: 'btn btn-success' %>
         </div>
       </div>
     <% end %>

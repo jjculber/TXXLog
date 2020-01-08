@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Time</th>
+      <th scope="col">Callsign</th>
+      <th scope="col">Category</th>
+      <th scope="col">Section</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%- @event.log_entries.each do |log_entry| %>
+    <tr> 
+      <td><%= log_entry.id %></td>
+      <td><%= log_entry.contact_at || log_entry.created_at %></td>
+      <td><%= log_entry.callsign %></td>
+      <td><%= log_entry.category %></td>
+      <td><%= log_entry.section %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

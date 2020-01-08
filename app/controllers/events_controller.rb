@@ -14,6 +14,15 @@ class EventsController < ApplicationController
     @event.save
   end
 
+  def log_contact
+    @event = Event.find(params[:id])
+    r = @event.log_entries.create(log_params)
+    puts r.errors.full_messages
+    puts r.persisted?
+
+    redirect_to event_path(@event)
+  end
+
   def edit
     @event = Event.find(params[:id])
   end
@@ -37,5 +46,10 @@ class EventsController < ApplicationController
       :wfd_bonus_offgrid, :wfd_bonus_outdoor, :wfd_bonus_remote,
       :wfd_bonus_satellite, :contact_name, :contact_address, :contact_city,
       :contact_state, :contact_postal_code, :contact_country, :contact_email)
+  end
+
+  def log_params
+    params.require(:log_entry).permit(:contact_at, :callsign, :category, :section,
+      :station_id, :user_id, :frequency, :mode, :deleted)
   end
 end
