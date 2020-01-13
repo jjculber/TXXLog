@@ -9,7 +9,9 @@ gem 'rails', '~> 6.0.1'
 gem 'sqlite3'
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '>= 4.3.1'
+gem 'rack', '>= 2.0.8'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
