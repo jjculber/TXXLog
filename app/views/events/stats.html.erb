@@ -1,0 +1,14 @@
+<div class="container">
+  <h3>Stats</h3>
+
+  <div>
+    Phone QSOs (1 point): <%= @event.log_entries.where(mode: 'PH').count %>
+  </div>
+  <div>
+    CW QSOs (2 point): <%= @event.log_entries.where(mode: 'CW').count %>
+  </div>
+  <div>
+    Digital QSOs (2 point): <%= @event.log_entries.where(mode: 'DI').count %>
+  </div>
+</div>
+

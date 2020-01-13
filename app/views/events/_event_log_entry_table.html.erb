@@ -2,20 +2,25 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Time</th>
+      <th scope="col">Time UTC</th>
+      <th scope="col">Freq</th>
+      <th scope="col">Mode</th>
       <th scope="col">Callsign</th>
       <th scope="col">Category</th>
       <th scope="col">Section</th>
     </tr>
   </thead>
   <tbody>
-  <%- @event.log_entries.each do |log_entry| %>
+  <%- @event.log_entries.each do |log| %>
+  <%- next unless log.persisted? %>
     <tr> 
-      <td><%= log_entry.id %></td>
-      <td><%= log_entry.contact_at || log_entry.created_at %></td>
-      <td><%= log_entry.callsign %></td>
-      <td><%= log_entry.category %></td>
-      <td><%= log_entry.section %></td>
+      <td><%= log.id %></td>
+      <td><%= I18n.l(log.contact_at || log.created_at, format: :short) %></td>
+      <td><%= log.frequency %></td>
+      <td><%= log.mode %></td>
+      <td><%= log.callsign %></td>
+      <td><%= log.category %></td>
+      <td><%= log.section %></td>
     </tr>
   <% end %>
   </tbody>

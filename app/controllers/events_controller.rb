@@ -29,9 +29,18 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
+    @event.update(event_params)
+
+    redirect_to edit_event_path(@event)
   end
   
   def show
+    @event = Event.find(params[:id])
+    last_event = @event.log_entries.last
+    @log_entry = @event.log_entries.new(frequency: last_event.try(:frequency), mode: last_event.try(:mode))
+  end
+
+  def stats
     @event = Event.find(params[:id])
   end
 

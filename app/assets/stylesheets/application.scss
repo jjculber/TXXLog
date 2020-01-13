@@ -2,9 +2,19 @@
 
 body {
   margin-top: 56px;
+  margin-bottom: 96px;
 }
 
 .log-entry-bar {
   background-color: #eee;
   padding-top: 10px;
+}
+.submit-log-btn {
+  margin: 15px;
+}
+.reverse-scroll {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100vh;
+  overflow: auto;
 }

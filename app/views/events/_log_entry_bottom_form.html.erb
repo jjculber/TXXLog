@@ -1,27 +1,39 @@
 <div class="log-entry-bar fixed-bottom">
-  <div class="container-xl">
-    <%= form_with model: LogEntry.new, url: log_contact_event_path(@event) do |form| %>
+  <div class="container-fluid">
+    <%= form_with model: @log_entry, url: log_contact_event_path(@event) do |form| %>
       <div class="row no-gutters">
-        <div class="col">
+        <div class="col-6 col-md-2">
+          <div class="form-group">
+            <%= form.label :frequency %>
+            <%= form.select :frequency, options_for_select(LogEntry::BANDS, @log_entry.frequency), {}, {class: "form-control"} %>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="form-group">
+            <%= form.label :mode %>
+            <%= form.select :mode, options_for_select(LogEntry::MODES, @log_entry.mode), {}, {class: "form-control"} %>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
           <div class="form-group">
             <%= form.label :callsign %>
             <%= form.text_field :callsign, autofocus: true, class: "form-control" %>
           </div>
         </div>
-        <div class="col">
+        <div class="col-6 col-md-2">
           <div class="form-group">
             <%= form.label :category %>
             <%= form.text_field :category, class: "form-control" %>
           </div>
         </div>
-        <div class="col">
+        <div class="col-6 col-md-2">
           <div class="form-group">
             <%= form.label :section %>
-            <%= form.text_field :section, class: "form-control" %>
+            <%= form.select(:section, grouped_options_for_select(LogEntry::ARRL_SECTIONS, @log_entry.section), {}, {class: "form-control"}) %>
           </div>
         </div>
-        <div class="col">
-          <%= form.submit "Submit", class: 'btn btn-success' %>
+        <div class="col-6 col-md-2">
+          <%= form.submit "Submit", class: 'btn btn-lg btn-success submit-log-btn' %>
         </div>
       </div>
     <% end %>

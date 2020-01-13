@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :events do
     member do
       post 'log_contact'
+      get 'stats'
     end
   end
   resources :stations

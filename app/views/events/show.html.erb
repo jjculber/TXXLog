@@ -1,17 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h2>Event: <%= @event.event_name %></h2>
-    </div>
-  </div>
-<!--  
-  <div class="row">
-    <div class="col">
-      Stats: TODO
-    </div>
-  </div>
--->
+<div class="reverse-scroll">
+  <%= render 'event_log_entry_table' %>
 </div>
-<%= render 'event_log_entry_table' %>
 
 <%= render 'log_entry_bottom_form' %>

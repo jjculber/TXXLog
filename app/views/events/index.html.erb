@@ -16,7 +16,8 @@
     <div class="col">
       <% @events.each do |event| %>
         <%= event.event_name %>
-        <%= link_to "View", event_path(event), class: "btn btn-outline-primary" %>
+        <%= link_to "View Log", event_path(event), class: "btn btn-outline-primary" %>
+        <%= link_to "Stats", stats_event_path(event), class: "btn btn-outline-primary" %>
         <%= link_to "Edit", edit_event_path(event), class: "btn btn-outline-primary" %>
       <% end %>
     </div>
