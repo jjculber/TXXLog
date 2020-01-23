@@ -38,6 +38,8 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     last_event = @event.log_entries.last
     @log_entry = @event.log_entries.new(frequency: last_event.try(:frequency), mode: last_event.try(:mode))
+    
+    render layout: 'event_log'
   end
 
   def stats

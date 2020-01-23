@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-body {
+#log-table {
   margin-top: 56px;
   margin-bottom: 96px;
 }
@@ -13,8 +13,4 @@ body {
   margin: 15px;
 }
 .reverse-scroll {
-  display: flex;
-  flex-direction: column-reverse;
-  height: 100vh;
-  overflow: auto;
 }
