@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     member do
       post 'log_contact'
       get 'stats'
+      get 'export_log'
     end
   end
   resources :stations

@@ -48,6 +48,7 @@ class EventsController < ApplicationController
 
   def export_log
     @event = Event.find(params[:id])
+    send_data @event.log_entries.to_csv, filename: "#{@event.event_name}-LogEntries-#{Date.today}.csv"
   end
 
   private

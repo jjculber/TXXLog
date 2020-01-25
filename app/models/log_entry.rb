@@ -164,4 +164,14 @@ class LogEntry < ApplicationRecord
 
   ]
 
+  def self.to_csv
+    attributes = %w(id callsign frequency mode created_at updated_at contact_at section category)
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+      all.each do |log_entry|
+        csv << attributes.map{ |attr| log_entry.send(attr) }
+      end
+    end
+  end
+
 end

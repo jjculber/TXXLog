@@ -11,7 +11,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="margin-top: 56px;">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <span class="navbar-brand"><%= (@event.present? ? [@event.try(:event_name).presence, @event.try(:exchange).presence].compact.join(" - ") : 'TXXLog') %></span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

@@ -18,6 +18,7 @@
         <%= event.event_name %>
         <%= link_to "View Log", event_path(event), class: "btn btn-outline-primary" %>
         <%= link_to "Stats", stats_event_path(event), class: "btn btn-outline-primary" %>
+        <%= link_to "Export CSV", export_log_event_path(event), class: "btn btn-outline-primary" %>
         <%= link_to "Edit", edit_event_path(event), class: "btn btn-outline-primary" %>
       <% end %>
     </div>

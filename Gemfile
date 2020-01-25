@@ -25,6 +25,7 @@ gem 'redis', '~> 4.0'
 gem 'devise'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem 'csv'
 
 gem 'sidekiq'
 # Use Active Model has_secure_password
