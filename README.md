@@ -25,7 +25,12 @@ This is a Ruby on Rails 6 application.
 It's currently using sqlite for the database, so it should be automatically created when the server starts.
 
 ### Install dependencies
-```bundle install```
+```
+bundle install
+yarn install
+bundle exec rake assets:precompile
+```
+
 
 ### Start the server
 ```bundle exec rails s```
