@@ -16,10 +16,6 @@ The goals:
 - [ ] Add basic websocket support for realtime interaction
 - [ ] Support more generic contest format, not just Winter Field Day
 
-## Deploy
-
-TODO instructions for running application with docker, including raspberry pi specific instructions.
-
 ## Development
 
 This is a Ruby on Rails 6 application.
@@ -43,3 +39,6 @@ To allow connections not just from localhost:
 ### Start an interactive console
 ```bundle exec rails c```
 
+## Deploy
+
+TODO instructions for running application with docker, including raspberry pi specific instructions.
