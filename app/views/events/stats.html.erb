@@ -1,4 +1,19 @@
 <div class="container">
+  <div class="row">
+    <div class="col">
+      &nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h2><%= @event.event_name %></h2>
+    </div>
+    <div class="col text-right">
+      <%= link_to "Start Logging", event_path(@event), class: "btn btn-outline-primary" %>
+      <%= link_to "Export CSV", export_log_event_path(@event), class: "btn btn-outline-primary" %>
+      <%= link_to "Edit", edit_event_path(@event), class: "btn btn-outline-primary" %>
+    </div>
+  </div>
   <h3>Stats</h3>
 
   <div>

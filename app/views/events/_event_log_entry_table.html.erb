@@ -1,7 +1,7 @@
 <table id="log-table" class="table table-striped">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <!-- <th scope="col">#</th> -->
       <th scope="col">Time UTC</th>
       <th scope="col">Freq</th>
       <th scope="col">Mode</th>
@@ -14,15 +14,15 @@
   <tbody>
   <%- @event.log_entries.each do |log| %>
   <%- next unless log.persisted? %>
-    <tr> 
-      <td><%= log.id %></td>
+    <tr class="<%= 'log-deleted' if log.deleted? %>"> 
+      <!-- <td><%= log.id %></td> -->
       <td><%= I18n.l(log.contact_at || log.created_at, format: :short) %></td>
       <td><%= log.frequency %></td>
       <td><%= log.mode %></td>
       <td><%= log.callsign %></td>
       <td><%= log.category %></td>
       <td><%= log.section %></td>
-      <td><%= link_to "edit", edit_log_entry_path(log) %></td>
+      <td><%= link_to "edit", edit_log_entry_path(log), class: 'btn btn-sm btn-outline-dark' %></td>
     </tr>
   <% end %>
   </tbody>
