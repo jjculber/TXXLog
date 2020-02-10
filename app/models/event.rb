@@ -31,6 +31,6 @@ class Event < ApplicationRecord
   has_many :log_entries
 
   def to_csv
-
+    log_entries.not_deleted.to_csv
   end
 end

@@ -22,7 +22,7 @@ class LogEntry < ApplicationRecord
   belongs_to :station, optional: true
   belongs_to :user, optional: true
 
-  scope :not_deleted, -> { where(deleted: false) }
+  scope :not_deleted, -> { where(deleted: [nil, false]) }
 
   BANDS = [
       ['160M / 1.8MHz', 1800],
